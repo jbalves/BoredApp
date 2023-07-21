@@ -1,6 +1,11 @@
 format_version: "11"
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 project_type: android
+primary:
+  steps:
+  - set-java-version@1:
+      inputs:
+      - set_java_version: '17'
 workflows:
   build_apk:
     summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
