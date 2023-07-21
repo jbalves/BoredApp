@@ -11,6 +11,9 @@ workflows:
     summary: Run your Android unit tests and create an APK file to install your app on a device or share it with your team.
     description: The workflow will first clone your Git repository, install Android tools, set the project's version code based on the build number, run Android lint and unit tests, build the project's APK file and save it.
     steps:
+    - set-java-version@1:
+        inputs:
+        - set_java_version: "17"
     - activate-ssh-key@4: {}
     - git-clone@8: {}
     - install-missing-android-tools@3:
