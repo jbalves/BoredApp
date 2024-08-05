@@ -1,10 +1,11 @@
 package com.example.boredapi.data
 
+import com.example.boredapi.data.network.dto.ActivityDto
 import com.example.boredapi.data.network.responseobject.ActivityResponse
 
 interface ActivityApi {
 
-    suspend fun getRandomActivity(): ActivityResponse
+    suspend fun getRandomActivity(): ActivityDto
 
-    suspend fun getActivityByKey(key: Int): ActivityResponse
+    suspend fun getActivityByKey(key: Int): ActivityDto
 }

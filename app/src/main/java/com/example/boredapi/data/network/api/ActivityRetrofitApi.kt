@@ -1,6 +1,7 @@
 package com.example.boredapi.data.network.api
 
 import com.example.boredapi.data.ActivityApi
+import com.example.boredapi.data.network.dto.ActivityDto
 import com.example.boredapi.data.network.responseobject.ActivityResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -8,8 +9,8 @@ import retrofit2.http.Path
 interface ActivityRetrofitApi: ActivityApi {
 
     @GET("random")
-    override suspend fun getRandomActivity(): ActivityResponse
+    override suspend fun getRandomActivity(): ActivityDto
 
     @GET("activity/{id}")
-    override suspend fun getActivityByKey(@Path("id") key: Int): ActivityResponse
+    override suspend fun getActivityByKey(@Path("id") key: Int): ActivityDto
 }
