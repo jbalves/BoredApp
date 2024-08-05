@@ -5,7 +5,7 @@ import com.example.boredapi.data.network.responseobject.ActivityResponse
 import javax.inject.Inject
 
 
-class ActivityMapper @Inject constructor() : BaseMapper<ActivityDto, ActivityResponse> {
+class ActivityDtoToActivityResponseMapper @Inject constructor() : BaseMapper<ActivityDto, ActivityResponse> {
     override fun mapFromInput(input: ActivityDto): ActivityResponse {
         return ActivityResponse(
             activity = input.activity,

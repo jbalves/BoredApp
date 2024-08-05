@@ -2,7 +2,7 @@ package com.example.boredapi.di
 
 import com.example.boredapi.data.ActivityApi
 import com.example.boredapi.data.network.ActivityRemoteDataSource
-import com.example.boredapi.data.network.mapper.ActivityMapper
+import com.example.boredapi.data.network.mapper.ActivityDtoToActivityResponseMapper
 import com.example.boredapi.data.repository.ActivityRepositoryImpl
 import com.example.boredapi.domain.ActivityRepository
 import dagger.Module
@@ -19,11 +19,11 @@ object RepositoryModule {
     @Singleton
     fun provideActivityRemoteDataSource(
         activityApi: ActivityApi,
-        activityMapper: ActivityMapper
+        activityDtoToActivityResponseMapper: ActivityDtoToActivityResponseMapper
     ): ActivityRemoteDataSource {
         return ActivityRemoteDataSource(
             activityApi,
-            activityMapper
+            activityDtoToActivityResponseMapper
         )
     }
 
