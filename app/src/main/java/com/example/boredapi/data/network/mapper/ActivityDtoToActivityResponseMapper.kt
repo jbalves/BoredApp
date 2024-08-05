@@ -2,10 +2,12 @@ package com.example.boredapi.data.network.mapper
 
 import com.example.boredapi.data.network.dto.ActivityDto
 import com.example.boredapi.data.network.responseobject.ActivityResponse
+import com.example.boredapi.utils.BaseMapper
 import javax.inject.Inject
 
 
-class ActivityDtoToActivityResponseMapper @Inject constructor() : BaseMapper<ActivityDto, ActivityResponse> {
+class ActivityDtoToActivityResponseMapper @Inject constructor() :
+    BaseMapper<ActivityDto, ActivityResponse> {
     override fun mapFromInput(input: ActivityDto): ActivityResponse {
         return ActivityResponse(
             activity = input.activity,

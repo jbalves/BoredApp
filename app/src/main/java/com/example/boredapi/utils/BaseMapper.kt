@@ -1,4 +1,4 @@
-package com.example.boredapi.data.network.mapper
+package com.example.boredapi.utils
 
 /**
  * Generic interface for mapping between different data types.
