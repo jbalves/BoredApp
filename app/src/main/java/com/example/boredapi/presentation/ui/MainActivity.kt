@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.activityByKey.observe(this) { activityResponse  ->
             // Update the UI with the activity data
-            txtId.text = activityResponse.activity ?: "Nothing activity found"
+            //txtId.text = activityResponse.activity ?: "Nothing activity found"
             Log.d(TAG, "Activity by Key: $activityResponse")
         }
 
